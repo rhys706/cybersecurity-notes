@@ -10,7 +10,7 @@ ok here we go
 
 <details>
 
-<summary>Create Kali Machine</summary>
+<summary>Create &#x26; Configure Kali Machine</summary>
 
 
 
@@ -18,15 +18,7 @@ ok here we go
 
 <details>
 
-<summary>Configure Kali</summary>
-
-
-
-</details>
-
-<details>
-
-<summary>Connecting to HTB</summary>
+<summary>Connect to HTB</summary>
 
 
 
