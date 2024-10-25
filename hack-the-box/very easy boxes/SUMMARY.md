@@ -1,4 +1,6 @@
 # Table of contents
 
-* [Archetype](README.md)
-* [Fawn](fawn.md)
+* [Fawn](README.md)
+* [Meow](meow.md)
+* [Dancing](dancing.md)
+* [Redeemer](redeemer.md)

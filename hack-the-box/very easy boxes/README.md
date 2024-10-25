@@ -1,33 +1,9 @@
-# Archetype
+# Fawn
 
-{% stepper %}
-{% step %}
-### Enumerate with nmap
-
-* Run [Broken link](broken-reference "mention") with `nmap -T4 <ip_address>`
-* On port 1433 we see ms-sql-s is running.
-{% endstep %}
-
-{% step %}
-### Enumerate the SMB server
-
-* We can get more data with `smbclient -L <target_IP> -N`
-* Non-admin accounts don't have the `$` on the end
-{% endstep %}
-
-{% step %}
-### Download files from the SMB server
-
-* `smbclient \\\\<target_IP>\\backups` (connect)
-* `get <filename>` (download file)
-* look in your current working directory for the downloaded file
-{% endstep %}
-
-{% step %}
-### Enumerate with impacket
-
-* Now we have the my-sql credentials we can use [Broken link](broken-reference "mention") to authenticate and get a shell.
-* `impacket-mssqlclient <username>:<password>@<target_IP> -windows-auth` (default port is 1433)
-* `xp_cmdshell dir` (run dir command)
-{% endstep %}
-{% endstepper %}
+1. Run [nmap](https://app.gitbook.com/s/DfkKonzwaN3qZbJhj85Q/enumeration#nmap "mention") to look for services: `nmap -T4 -sV <target_IP>`
+2. FTP is running on port 21. Connect with `ftp -p <target_IP> <port>`
+3. You can login with username = `anonymous` and no password (weak credentials)
+4. Use `ls` to see the files on the server
+5. Download `flag.txt` with get `flag.txt`
+6. Exit the server using `quit`
+7. Read the file using [nano](https://app.gitbook.com/s/DfkKonzwaN3qZbJhj85Q/#nano "mention") with `nano flag.txt`
